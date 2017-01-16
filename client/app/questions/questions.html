@@ -1,0 +1,21 @@
+
+
+<div class = 'navigation'>
+	<ul>
+		<li class='nav'><a href='/#/questions'>Questions</a></li>
+		<li class='nav'><a href='/#/replies'>Replies</a></li>
+	</ul>
+</div>
+
+
+
+
+<form id='Question' ng-Submit='addQuestion()'>
+	Question:  <input type="text" class='input' ng-model = 'question'/> <br>
+	<button>Submit</button>
+</form>
+
+<hr>
+<ul>
+	<li ng-Repeat='question in data.questions track by $index' class='listQuestions' ng-click='saveValue(question.question)'><a href='/#/replies'>{{ question.question}} </a></li>
+</ul>

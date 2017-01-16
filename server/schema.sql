@@ -1,0 +1,19 @@
+CREATE DATABASE overflow;
+
+USE overflow;
+
+CREATE TABLE questions (
+  id INT NOT NULL AUTO_INCREMENT,
+  question VARCHAR(2000) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE replies (
+  id INT NOT NULL AUTO_INCREMENT,
+  reply VARCHAR(2000) NOT NULL,
+  question INT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+
