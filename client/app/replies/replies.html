@@ -1,22 +1,23 @@
 
 <div class='navigation'>
 	<ul>
-		<li class='nav'><a href='/#/questions'>Questions</a></li>
-		<li class='nav'><a href='/#/replies'>Replies</a></li>
+		<li class='nav'><a href='/#/questions'>Add Question</a></li>
+		<!-- <li class='nav'><a href='/#/replies'>Replies</a></li> -->
 	</ul>
 </div>
 
-<center><textarea form='Reply' class='input' ng-model='reply'></textarea></center>
 <form id='Reply' ng-submit = 'addReply()'>
+  Reply:  <textarea form='Reply' class='input' ng-model='reply'></textarea><br>
 	<!-- Reply:  <input type="text" class = 'input' ng-model = 'reply'/><br> -->
+	<br>
 	<button>Submit</button>
 </form>
 <hr>
 <ul>
 	Question: <li class='listQuestions'>{{ data.question }}</li>
 </ul>
-<hr>
-<ul>
+
+<ul id='replyList'>
  Replies: <li ng-Repeat = 'replies in data.replies track by $index' class = 'listReplies'>{{ replies.reply }}</li>
 </ul>
 

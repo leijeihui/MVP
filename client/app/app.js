@@ -14,8 +14,12 @@ angular.module('MVPsolo', [
       templateUrl: 'app/replies/replies.html',
       controller: 'RepliesCtrl'
     })
+    .when('/', {
+      templateUrl:'app/questions/home.html',
+      controller: 'QuestionsCtrl'
+    })
     .otherwise({
-      redirectTo:'/questions'
+      redirectTo:'/'
     })
 
 })

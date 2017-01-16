@@ -1,22 +1,13 @@
-
-
 <div class = 'navigation'>
 	<ul>
 		<li class='nav'><a href='/#/questions'>Add Question</a></li>
 		<!-- <li class='nav'><a href='/#/replies'>Replies</a></li> -->
 	</ul>
 </div>
-
-
-
-<form id='Question' ng-Submit='addQuestion()'>
-  Question:  <textarea form='Question' class='input' ng-model='question' ></textarea><br>
-	<!-- Question:  <input type="text" class='input' ng-model = 'question'/> <br> -->
-	<br>
-	<button>Submit</button>
-</form>
+<div class='home_description'>He who asks a question remains a fool for 5 minutes <hr id='hr_line'> He who does not ask remains a fool forever.</div>
 
 
 <ul>
 	<li ng-Repeat='question in data.questions track by $index' class='listQuestions' ng-click='saveValue(question.question)'><a href='/#/replies'>{{ question.question}} </a></li>
 </ul>
+

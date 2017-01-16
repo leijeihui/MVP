@@ -2,8 +2,15 @@ body {
 	margin: 0;
 }
 
+h1 {
+	background-image: url('/assets/background.jpg');
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px; 
+}
 .navigation {
 	background-color: #212F3C;
+	margin: 0;
 }
 
 .nav {
@@ -16,6 +23,33 @@ body {
 	border-style: solid;
 }
 
+.home_description {
+	font-size: 24px;
+	text-align: center;
+	background-image: url('/assets/background.jpg');
+	color:white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+}
+
+hr {
+	margin-top: 0;
+	text-align: center;
+
+}
+
+#hr_line {
+	margin-top: 10px;
+	width: 50%;
+	text-align: center;
+	color: white;
+}
+
 a {
 	text-decoration: none;
 	color: #2E86C1;
@@ -24,15 +58,17 @@ a {
 form {
 	text-align: center;
 	left:50%;
+	background-image: url('/assets/background.jpg');
+	padding-bottom: 20px;
 }
 
 .input {
-
+	margin-top: 30px;
 	height: 100px;
 	width: 50%;
 	font-size: 14px;
 	padding: 0;
-	word-break: break-word;
+	resize: none;
 }
 
 .listQuestions {
@@ -54,4 +90,12 @@ form {
 	border: 2px solid blue;
 	border-radius: 10px;
 	background-color: #9FF9F8;
+}
+
+#title {
+	color: black;
+}
+
+#replyList {
+	padding-top: 20px;
 }
