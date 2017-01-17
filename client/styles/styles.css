@@ -115,3 +115,9 @@ form {
 	width: 37px;
 	position: absolute;
 }
+
+#joke {
+	font-size: 24px;
+	text-align: center;
+	color: darkblue;
+}

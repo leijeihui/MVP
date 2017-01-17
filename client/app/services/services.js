@@ -28,6 +28,14 @@ angular.module('MVPsolo.services', [])
 			}).then(function(resp){
 				return resp;
 			})
+		},
+		getJoke: function(){
+			return $http({
+				method: 'GET',
+				url: 'http://api.icndb.com/jokes/random?limitTo=[nerdy]'
+			}).then(function(resp){
+				return resp.data
+			})
 		}
 	}
 })

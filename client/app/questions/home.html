@@ -6,7 +6,7 @@
 </div>
 <div class='home_description'>He who asks a question remains a fool for 5 minutes <hr id='hr_line'> He who does not ask remains a fool forever.</div>
 
-
+<div id='joke'> Joke:  {{joke}}</div>
 <ul>
 	<li ng-Repeat='question in data.questions track by $index' class='listQuestions' ng-click='saveValue(question.question)'><a href='/#/replies'> {{$index}}. {{ question.question}} </a></li>
 </ul>

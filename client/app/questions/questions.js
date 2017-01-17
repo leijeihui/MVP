@@ -33,6 +33,11 @@ angular.module('MVPsolo.questions', [])
     })
   };
 
+  Questions.getJoke().then(function(joke){
+    console.log(joke);
+    $scope.joke = joke.value.joke.replace(/[!@#$%^&**()<>{}]/g, '');
+  })
+
   Questions.getAll().then(function(questions){
   	$scope.data.questions = questions.reverse();
   });
