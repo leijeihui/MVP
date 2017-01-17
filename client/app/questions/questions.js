@@ -13,7 +13,7 @@ angular.module('MVPsolo.questions', [])
 			// window.location.reload('/questions');
       Questions.getAll().then(function(questions){
         $scope.data.questions = questions.reverse();
-        return $scope.data.questions;
+        // return $scope.data.questions;
       })
 		})
   }
@@ -28,7 +28,7 @@ angular.module('MVPsolo.questions', [])
     Questions.removeOne(question).then(function(){
       Questions.getAll().then(function(questions){
         $scope.data.questions = questions.reverse();
-        return $scope.data.questions;
+        // return $scope.data.questions;
       })
     })
   };
@@ -36,6 +36,6 @@ angular.module('MVPsolo.questions', [])
   Questions.getAll().then(function(questions){
   	$scope.data.questions = questions.reverse();
   });
-  return $scope.data.questions;
+  // return $scope.data.questions;
 
 })

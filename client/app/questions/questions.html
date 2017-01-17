@@ -17,9 +17,11 @@
 </form>
 
 <!-- <div>{{ data }}</div> -->
+		
 <ul>
 	<li ng-Repeat='question in data.questions track by $index' class='listQuestions' >
-	<span ng-click='removeQuestion(question.question)'> X </span>
-	<a href='/#/replies' ng-click='saveValue(question.question)'>  {{ $index }}. {{ question.question}} </a>
+		<span ng-click='removeQuestion(question.question)'> X </span>
+		<a href='/#/replies' ng-click='saveValue(question.question)'>  {{ $index }}. {{ question.question}} </a>
 	</li>
 </ul>
+

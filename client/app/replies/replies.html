@@ -13,12 +13,12 @@
 	<button>Submit</button>
 </form>
 <hr>
-<ul>
-	Question: <li class='listQuestions'>{{ data.question }}</li>
+		
+<ul id='replyList'>
+  Question: <li class='listQuestions'>{{ data.question }}</li>
+  <br>
+  Replies: <li ng-Repeat = 'replies in data.replies track by $index' class = 'listReplies'>  {{ replies.reply }}  </li>
 </ul>
 
-<ul id='replyList'>
- Replies: <li ng-Repeat = 'replies in data.replies track by $index' class = 'listReplies'>  {{ replies.reply }}  </li>
-</ul>
 
 

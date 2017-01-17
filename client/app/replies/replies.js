@@ -15,7 +15,7 @@ $scope.addReply = function(){
 			$scope.data = {};
 			$scope.data.question = $window.localStorage.question;
 			$scope.data.replies = replies.reverse()
-			return $scope.data;
+			// return $scope.data;
 		});
 	})
 }
@@ -26,7 +26,7 @@ Replies.getAll($window.localStorage.question).then(function(replies){
   $scope.data.question = $window.localStorage.question;
 	$scope.data.replies = replies.reverse()
 });
-return $scope.data;
+// return $scope.data;
 
 
 
