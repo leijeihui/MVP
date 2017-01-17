@@ -23,6 +23,3 @@ angular.module('MVPsolo', [
     })
 
 })
-.run(function(){
-
-})

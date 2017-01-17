@@ -23,4 +23,11 @@ app.listen(port);
 
 console.log('Listening on port: ', port);
 
-// module.exports = app;
+//FLOW:server setup (express, body-Parser, morgan)
+	//database setup (mysql, schema.sql)
+		//server routing (get,post,put, delete)
+			//bower install (angular, ngRoute)
+				//angular factories that http requests with server endpoints
+					//angualr controllers for each view
+						//angular client side routing ($routeProvider -- templateUrl, controller)
+							//make index.html and templates

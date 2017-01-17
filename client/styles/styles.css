@@ -1,11 +1,11 @@
 body {
 	margin: 0;
-	background-image: url('/assets/body_image.jpg');
+	background-image: url('/assets/background.jpg');
 	background-size: 100%;
 }
 
 h1 {
-	background-image: url('/assets/background.jpg');
+	/*background-image: url('/assets/background.jpg');*/
 	background-size: 100%;
 	margin: 0;
 	padding-top: 20px;
@@ -29,9 +29,10 @@ h1 {
 .home_description {
 	font-size: 24px;
 	text-align: center;
-	background-image: url('/assets/background.jpg');
+	/*background-image: url('/assets/background.jpg');*/
 	background-size: 100%;
-	color:white;
+	color: darkblue;
+	font-weight: bold;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	margin: 0;
@@ -62,7 +63,7 @@ a {
 form {
 	text-align: center;
 	left:50%;
-	background-image: url('/assets/background.jpg');
+	/*background-image: url('/assets/background.jpg');*/
 	background-size: 100%;
 	padding-bottom: 20px;
 }
@@ -101,8 +102,16 @@ form {
 
 #title {
 	color: black;
+	left: 35px;
+	position: relative;
 }
 
 #replyList {
 	padding-top: 20px;
+}
+
+#icon {
+	height: 37px;
+	width: 37px;
+	position: absolute;
 }
