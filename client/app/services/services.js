@@ -44,7 +44,6 @@ angular.module('MVPsolo.services', [])
 .factory('Replies', function ($http){
 	return {
 		getAll: function (question){
-			console.log('this is the question: ', question)
 			return $http({
 				method: 'GET',
 				url: '/api/replies',
@@ -61,6 +60,15 @@ angular.module('MVPsolo.services', [])
 			}). then (function(resp){
 				return resp;
 			})
+		},
+		getAnswer: function(question){
+			return $http({
+				method: 'GET',
+				url:'http://api.duckduckgo.com/?q=' + question + '&format=json'
+			}).then(function(resp){
+				return resp.data;
+			})
 		}
 	}
+
 })

@@ -14,7 +14,7 @@ $scope.addReply = function(){
 		Replies.getAll($window.localStorage.question).then(function(replies){
 			$scope.data = {};
 			$scope.data.question = $window.localStorage.question;
-			$scope.data.replies = replies.reverse()
+			$scope.data.replies = replies
 			// return $scope.data;
 		});
 	})
@@ -22,9 +22,18 @@ $scope.addReply = function(){
 
 // console.log($cookies.get('question'))
 
+
+Replies.getAnswer($window.localStorage.question).then(function(answer){
+	if(answer.Abstract){
+		$scope.data.answer = answer.Abstract;
+	} else {
+		$scope.data.answer = 'nothing'
+	}
+})
+
 Replies.getAll($window.localStorage.question).then(function(replies){
   $scope.data.question = $window.localStorage.question;
-	$scope.data.replies = replies.reverse()
+	$scope.data.replies = replies
 });
 // return $scope.data;
 

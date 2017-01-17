@@ -24,7 +24,6 @@ angular.module('MVPsolo.questions', [])
   }
 
   $scope.removeQuestion = function(question){
-    console.log('this question is going to be removed', question);
     Questions.removeOne(question).then(function(){
       Questions.getAll().then(function(questions){
         $scope.data.questions = questions.reverse();
