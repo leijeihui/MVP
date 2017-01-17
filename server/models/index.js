@@ -16,6 +16,13 @@ module.exports = {
 				if(err) throw err;
 				callback(results)
 			});
+		},
+		remove: function(params, callback) {
+			var queryStr = 'DELETE FROM questions WHERE question="' + params + '"';
+			db.query(queryStr, function(err, results){
+				if(err) throw err;
+				callback(results);
+			})
 		}
 	},
 	replies: {

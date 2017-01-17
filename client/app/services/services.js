@@ -17,7 +17,16 @@ angular.module('MVPsolo.services', [])
 				url: '/api/questions',
 				data: question
 			}).then(function (resp){
-				return resp
+				return resp;
+			})
+		},
+		removeOne: function(question){
+			return $http({
+				method: 'DELETE',
+				url: '/api/questions',
+				params: {question: question}
+			}).then(function(resp){
+				return resp;
 			})
 		}
 	}

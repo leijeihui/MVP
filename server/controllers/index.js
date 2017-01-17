@@ -13,6 +13,12 @@ module.exports = {
 			models.questions.post(params, function(results){
 				res.sendStatus(201);
 			})
+		},
+		remove: function(req, res){
+			var params = req.query.question;
+			models.questions.remove(params, function(results){
+				res.sendStatus(201);
+			})
 		}
 	},
 

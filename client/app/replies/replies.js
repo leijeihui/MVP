@@ -8,28 +8,26 @@ $scope.data = {};
 $scope.addReply = function(){
 	var reply = {};
 	reply.reply = $scope.reply;
-	reply.question = $window.question;
+	reply.question = $window.localStorage.question;
 	$scope.reply = '';
 	Replies.addOne(reply).then(function(){
-		Replies.getAll($window.question).then(function(replies){
+		Replies.getAll($window.localStorage.question).then(function(replies){
 			$scope.data = {};
-			$scope.data.question = $window.question;
+			$scope.data.question = $window.localStorage.question;
 			$scope.data.replies = replies.reverse()
 			return $scope.data;
 		});
 	})
 }
 
+// console.log($cookies.get('question'))
 
-if($window.question){
-	Replies.getAll($window.question).then(function(replies){
-	  $scope.data.question = $window.question;
-		$scope.data.replies = replies.reverse()
-	});
-	return $scope.data;
-} else {
-	$location.path('/questions');
-}
+Replies.getAll($window.localStorage.question).then(function(replies){
+  $scope.data.question = $window.localStorage.question;
+	$scope.data.replies = replies.reverse()
+});
+return $scope.data;
+
 
 
 
