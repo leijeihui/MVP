@@ -11,6 +11,12 @@ angular.module('MVPsolo.questions', [])
 		// console.log(question)
 		Questions.addOne(question).then(function(){
 			// window.location.reload('/questions');
+
+      Questions.getJoke().then(function(joke){
+        console.log(joke);
+        $scope.joke = joke.value.joke.replace(/[!@#$%^&**()<>"'{}]/g, '');
+      })
+
       Questions.getAll().then(function(questions){
         $scope.data.questions = questions.reverse();
         // return $scope.data.questions;
